@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo cat << EOF > /usr/local/bin/ToscanoAltaUser-Groups.sh
+cat << EOF > /usr/local/bin/ToscanoAltaUser-Groups.sh
 #!/bin/bash
 
 USUARIO_REF=$1
