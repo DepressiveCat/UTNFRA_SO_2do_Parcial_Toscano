@@ -1,8 +1,8 @@
 #!/bin/bash
 
-mkdir /work
+sudo mkdir /work
 
-sudo fdisk /dev/sdd
+sudo fdisk /dev/sdd << EOF
 n
 
 
@@ -14,14 +14,15 @@ n
 
 +512M
 w
-sudo fdisk /dev/sdc
+EOF
+sudo fdisk /dev/sdc << EOF
 n
 
 
 
 +1.5G
 w
-
+EOF
 sudo pvcreate /dev/sdd1
 sudo vgcreate vg_datos /dev/sdd1
 sudo pvcreate /dev/sdc1
