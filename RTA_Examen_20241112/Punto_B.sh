@@ -6,7 +6,7 @@ cat << EOF > /usr/local/bin/ToscanoAltaUser-Groups.sh
 USUARIO_REF=$1
 LISTA=$2
 
-CONTRA=$(sudo getent shadow $USUARIO_REF | cut -d: -f2)
+CONTRA=$(sudo grep $USUARIO_REF /etc/shadow | awk -F ':' '{print $2}')
 
 ANT_IFS=$IFS
 IFS=$'\n'
