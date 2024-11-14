@@ -1,0 +1,399 @@
+2024-06-24 18:08:06,499 p=3444395 u=upszot n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 18:08:06,598 p=3444395 u=upszot n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:06,609 p=3444395 u=upszot n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,746 p=3444395 u=upszot n=ansible | ok: [localhost]
+2024-06-24 18:08:07,775 p=3444395 u=upszot n=ansible | TASK [include_role : 2do_parcial] ***********************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,805 p=3444395 u=upszot n=ansible | TASK [2do_parcial : debug] ******************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,817 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 18:08:07,836 p=3444395 u=upszot n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,851 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-14 05:37:31,367 p=2115 u=toscano n=ansible | [WARNING]: Unable to parse /home/toscano/UTN-FRA_SO_Examenes/202406/ansible/hosts.ini as an inventory source
+
+2024-11-14 05:37:31,376 p=2115 u=toscano n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-11-14 05:37:31,395 p=2115 u=toscano n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-11-14 05:37:32,484 p=2115 u=toscano n=ansible | PLAY [all] ************************************************************************************************************************************
+2024-11-14 05:37:32,485 p=2115 u=toscano n=ansible | skipping: no hosts matched
+2024-11-14 05:37:32,485 p=2115 u=toscano n=ansible | PLAY RECAP ************************************************************************************************************************************
+2024-11-14 05:39:32,585 p=2120 u=toscano n=ansible | ERROR! the playbook: hosts.ini could not be found
+2024-11-14 05:40:19,507 p=2122 u=toscano n=ansible | ERROR! the playbook: hosts.ini could not be found
+2024-11-14 05:41:22,318 p=2125 u=toscano n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-14 05:41:22,481 p=2125 u=toscano n=ansible | PLAY [all] ************************************************************************************************************************************
+2024-11-14 05:41:22,704 p=2125 u=toscano n=ansible | TASK [Gathering Facts] ************************************************************************************************************************
+2024-11-14 05:41:22,858 p=2125 u=toscano n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\ntoscano@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-14 05:41:25,099 p=2125 u=toscano n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-11-14 05:41:25,099 p=2125 u=toscano n=ansible | ok: [localhost]
+2024-11-14 05:41:25,109 p=2125 u=toscano n=ansible | TASK [include_role : 2do_parcial] *************************************************************************************************************
+2024-11-14 05:41:25,304 p=2125 u=toscano n=ansible | included: 2do_parcial for localhost
+2024-11-14 05:41:25,321 p=2125 u=toscano n=ansible | TASK [2do_parcial : debug] ********************************************************************************************************************
+2024-11-14 05:41:25,338 p=2125 u=toscano n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-14 05:41:25,346 p=2125 u=toscano n=ansible | TASK [2do_parcial : Crear directorios en /tmp/2do_parcial/] ***********************************************************************************
+2024-11-14 05:41:25,712 p=2125 u=toscano n=ansible | changed: [localhost] => (item=alumno)
+2024-11-14 05:41:25,900 p=2125 u=toscano n=ansible | changed: [localhost] => (item=equipo)
+2024-11-14 05:41:25,909 p=2125 u=toscano n=ansible | TASK [2do_parcial : Agrego archivo desde template] ********************************************************************************************
+2024-11-14 05:41:26,602 p=2125 u=toscano n=ansible | changed: [localhost]
+2024-11-14 05:41:26,608 p=2125 u=toscano n=ansible | TASK [2do_parcial : Agrego otro archivo desde template] ***************************************************************************************
+2024-11-14 05:41:26,986 p=2125 u=toscano n=ansible | changed: [localhost]
+2024-11-14 05:41:26,993 p=2125 u=toscano n=ansible | TASK [2do_parcial : add NOPASSWD in sudores for group 2PSupervisores] *************************************************************************
+2024-11-14 05:41:27,390 p=2125 u=toscano n=ansible | changed: [localhost]
+2024-11-14 05:41:27,401 p=2125 u=toscano n=ansible | TASK [Otra tarea] *****************************************************************************************************************************
+2024-11-14 05:41:27,415 p=2125 u=toscano n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-14 05:41:27,417 p=2125 u=toscano n=ansible | PLAY RECAP ************************************************************************************************************************************
+2024-11-14 05:41:27,417 p=2125 u=toscano n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-14 05:41:27,417 p=2125 u=toscano n=ansible | localhost                  : ok=8    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-14 05:43:56,120 p=2407 u=toscano n=ansible | ansible-playbook [core 2.17.6]
+  config file = /home/toscano/UTN-FRA_SO_Examenes/202406/ansible/ansible.cfg
+  configured module search path = ['/home/toscano/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  ansible collection location = /home/toscano/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.10.12 (main, Sep 11 2024, 15:47:36) [GCC 11.4.0] (/usr/bin/python3)
+  jinja version = 3.0.3
+  libyaml = True
+2024-11-14 05:43:56,120 p=2407 u=toscano n=ansible | Using /home/toscano/UTN-FRA_SO_Examenes/202406/ansible/ansible.cfg as config file
+2024-11-14 05:43:56,276 p=2407 u=toscano n=ansible | host_list declined parsing /home/toscano/UTN-FRA_SO_Examenes/202406/ansible/inventory/hosts as it did not pass its verify_file() method
+2024-11-14 05:43:56,276 p=2407 u=toscano n=ansible | script declined parsing /home/toscano/UTN-FRA_SO_Examenes/202406/ansible/inventory/hosts as it did not pass its verify_file() method
+2024-11-14 05:43:56,277 p=2407 u=toscano n=ansible | auto declined parsing /home/toscano/UTN-FRA_SO_Examenes/202406/ansible/inventory/hosts as it did not pass its verify_file() method
+2024-11-14 05:43:56,279 p=2407 u=toscano n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-14 05:43:56,279 p=2407 u=toscano n=ansible | Parsed /home/toscano/UTN-FRA_SO_Examenes/202406/ansible/inventory/hosts inventory source with ini plugin
+2024-11-14 05:43:56,418 p=2407 u=toscano n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-11-14 05:43:56,418 p=2407 u=toscano n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-11-14 05:43:56,419 p=2407 u=toscano n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-11-14 05:43:56,419 p=2407 u=toscano n=ansible | PLAYBOOK: playbook.yml ************************************************************************************************************************
+2024-11-14 05:43:56,419 p=2407 u=toscano n=ansible | 1 plays in playbook.yml
+2024-11-14 05:43:56,420 p=2407 u=toscano n=ansible | PLAY [all] ************************************************************************************************************************************
+2024-11-14 05:43:56,428 p=2407 u=toscano n=ansible | TASK [Gathering Facts] ************************************************************************************************************************
+2024-11-14 05:43:56,441 p=2407 u=toscano n=ansible | <127.0.0.1> ESTABLISH SSH CONNECTION FOR USER: None
+2024-11-14 05:43:56,443 p=2407 u=toscano n=ansible | <127.0.0.1> SSH: EXEC ssh -vvv -o ControlMaster=auto -o ControlPersist=60s -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/toscano/.ansible/cp/21f0e6a9ae"' 127.0.0.1 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+2024-11-14 05:43:56,454 p=2407 u=toscano n=ansible | <localhost> ESTABLISH LOCAL CONNECTION FOR USER: toscano
+2024-11-14 05:43:56,455 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'echo ~toscano && sleep 0'
+2024-11-14 05:43:56,462 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/toscano/.ansible/tmp `"&& mkdir "` echo /home/toscano/.ansible/tmp/ansible-tmp-1731563036.4602785-2411-216465275199297 `" && echo ansible-tmp-1731563036.4602785-2411-216465275199297="` echo /home/toscano/.ansible/tmp/ansible-tmp-1731563036.4602785-2411-216465275199297 `" ) && sleep 0'
+2024-11-14 05:43:56,551 p=2407 u=toscano n=ansible | <127.0.0.1> (255, b'', b'OpenSSH_8.9p1 Ubuntu-3ubuntu0.10, OpenSSL 3.0.2 15 Mar 2022\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files\r\ndebug1: /etc/ssh/ssh_config line 21: Applying options for *\r\ndebug2: resolve_canonicalize: hostname 127.0.0.1 is address\r\ndebug1: auto-mux: Trying existing master\r\ndebug1: Control socket "/home/toscano/.ansible/cp/21f0e6a9ae" does not exist\r\ndebug3: ssh_connect_direct: entering\r\ndebug1: Connecting to 127.0.0.1 [127.0.0.1] port 22.\r\ndebug3: set_sock_tos: set socket 3 IP_TOS 0x10\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug1: fd 3 clearing O_NONBLOCK\r\ndebug1: Connection established.\r\ndebug3: timeout: 10000 ms remain after connect\r\ndebug1: identity file /home/toscano/.ssh/id_rsa type 0\r\ndebug1: identity file /home/toscano/.ssh/id_rsa-cert type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ecdsa type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ecdsa-cert type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ecdsa_sk type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ecdsa_sk-cert type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ed25519 type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ed25519-cert type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ed25519_sk type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ed25519_sk-cert type -1\r\ndebug1: identity file /home/toscano/.ssh/id_xmss type -1\r\ndebug1: identity file /home/toscano/.ssh/id_xmss-cert type -1\r\ndebug1: identity file /home/toscano/.ssh/id_dsa type -1\r\ndebug1: identity file /home/toscano/.ssh/id_dsa-cert type -1\r\ndebug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10\r\ndebug1: Remote protocol version 2.0, remote software version OpenSSH_8.9p1 Ubuntu-3ubuntu0.10\r\ndebug1: compat_banner: match: OpenSSH_8.9p1 Ubuntu-3ubuntu0.10 pat OpenSSH* compat 0x04000000\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug1: Authenticating to 127.0.0.1:22 as \'toscano\'\r\ndebug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory\r\ndebug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory\r\ndebug3: order_hostkeyalgs: no algorithms matched; accept original\r\ndebug3: send packet: type 20\r\ndebug1: SSH2_MSG_KEXINIT sent\r\ndebug3: receive packet: type 20\r\ndebug1: SSH2_MSG_KEXINIT received\r\ndebug2: local client KEXINIT proposal\r\ndebug2: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,sntrup761x25519-sha512@openssh.com,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com\r\ndebug2: host key algorithms: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-256\r\ndebug2: ciphers ctos: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com\r\ndebug2: ciphers stoc: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com\r\ndebug2: MACs ctos: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1\r\ndebug2: MACs stoc: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1\r\ndebug2: compression ctos: none,zlib@openssh.com,zlib\r\ndebug2: compression stoc: none,zlib@openssh.com,zlib\r\ndebug2: languages ctos: \r\ndebug2: languages stoc: \r\ndebug2: first_kex_follows 0 \r\ndebug2: reserved 0 \r\ndebug2: peer server KEXINIT proposal\r\ndebug2: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,sntrup761x25519-sha512@openssh.com,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,kex-strict-s-v00@openssh.com\r\ndebug2: host key algorithms: rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519\r\ndebug2: ciphers ctos: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com\r\ndebug2: ciphers stoc: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com\r\ndebug2: MACs ctos: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1\r\ndebug2: MACs stoc: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1\r\ndebug2: compression ctos: none,zlib@openssh.com\r\ndebug2: compression stoc: none,zlib@openssh.com\r\ndebug2: languages ctos: \r\ndebug2: languages stoc: \r\ndebug2: first_kex_follows 0 \r\ndebug2: reserved 0 \r\ndebug3: kex_choose_conf: will use strict KEX ordering\r\ndebug1: kex: algorithm: curve25519-sha256\r\ndebug1: kex: host key algorithm: ssh-ed25519\r\ndebug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none\r\ndebug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none\r\ndebug3: send packet: type 30\r\ndebug1: expecting SSH2_MSG_KEX_ECDH_REPLY\r\ndebug3: receive packet: type 31\r\ndebug1: SSH2_MSG_KEX_ECDH_REPLY received\r\ndebug1: Server host key: ssh-ed25519 SHA256:zp2yhL+lfiVmGIiBD/FIMKtF0arZe1jowJcp7QDMmXQ\r\ndebug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory\r\ndebug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory\r\nWarning: Permanently added \'127.0.0.1\' (ED25519) to the list of known hosts.\r\ndebug3: send packet: type 21\r\ndebug1: ssh_packet_send2_wrapped: resetting send seqnr 3\r\ndebug2: ssh_set_newkeys: mode 1\r\ndebug1: rekey out after 134217728 blocks\r\ndebug1: SSH2_MSG_NEWKEYS sent\r\ndebug1: expecting SSH2_MSG_NEWKEYS\r\ndebug3: receive packet: type 21\r\ndebug1: ssh_packet_read_poll2: resetting read seqnr 3\r\ndebug1: SSH2_MSG_NEWKEYS received\r\ndebug2: ssh_set_newkeys: mode 0\r\ndebug1: rekey in after 134217728 blocks\r\ndebug1: Will attempt key: /home/toscano/.ssh/id_rsa RSA SHA256:7nuq4ueYrd/JBVSE8NjqgopBxJznHeiaxSCPKEqD4hE\r\ndebug1: Will attempt key: /home/toscano/.ssh/id_ecdsa \r\ndebug1: Will attempt key: /home/toscano/.ssh/id_ecdsa_sk \r\ndebug1: Will attempt key: /home/toscano/.ssh/id_ed25519 \r\ndebug1: Will attempt key: /home/toscano/.ssh/id_ed25519_sk \r\ndebug1: Will attempt key: /home/toscano/.ssh/id_xmss \r\ndebug1: Will attempt key: /home/toscano/.ssh/id_dsa \r\ndebug2: pubkey_prepare: done\r\ndebug3: send packet: type 5\r\ndebug3: receive packet: type 7\r\ndebug1: SSH2_MSG_EXT_INFO received\r\ndebug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519,sk-ssh-ed25519@openssh.com,ssh-rsa,rsa-sha2-256,rsa-sha2-512,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ecdsa-sha2-nistp256@openssh.com,webauthn-sk-ecdsa-sha2-nistp256@openssh.com>\r\ndebug1: kex_input_ext_info: publickey-hostbound@openssh.com=<0>\r\ndebug3: receive packet: type 6\r\ndebug2: service_accept: ssh-userauth\r\ndebug1: SSH2_MSG_SERVICE_ACCEPT received\r\ndebug3: send packet: type 50\r\ndebug3: receive packet: type 51\r\ndebug1: Authentications that can continue: publickey\r\ndebug3: start over, passed a different list publickey\r\ndebug3: preferred gssapi-with-mic,gssapi-keyex,hostbased,publickey\r\ndebug3: authmethod_lookup publickey\r\ndebug3: remaining preferred: ,gssapi-keyex,hostbased,publickey\r\ndebug3: authmethod_is_enabled publickey\r\ndebug1: Next authentication method: publickey\r\ndebug1: Offering public key: /home/toscano/.ssh/id_rsa RSA SHA256:7nuq4ueYrd/JBVSE8NjqgopBxJznHeiaxSCPKEqD4hE\r\ndebug3: send packet: type 50\r\ndebug2: we sent a publickey packet, wait for reply\r\ndebug3: receive packet: type 51\r\ndebug1: Authentications that can continue: publickey\r\ndebug1: Trying private key: /home/toscano/.ssh/id_ecdsa\r\ndebug3: no such identity: /home/toscano/.ssh/id_ecdsa: No such file or directory\r\ndebug1: Trying private key: /home/toscano/.ssh/id_ecdsa_sk\r\ndebug3: no such identity: /home/toscano/.ssh/id_ecdsa_sk: No such file or directory\r\ndebug1: Trying private key: /home/toscano/.ssh/id_ed25519\r\ndebug3: no such identity: /home/toscano/.ssh/id_ed25519: No such file or directory\r\ndebug1: Trying private key: /home/toscano/.ssh/id_ed25519_sk\r\ndebug3: no such identity: /home/toscano/.ssh/id_ed25519_sk: No such file or directory\r\ndebug1: Trying private key: /home/toscano/.ssh/id_xmss\r\ndebug3: no such identity: /home/toscano/.ssh/id_xmss: No such file or directory\r\ndebug1: Trying private key: /home/toscano/.ssh/id_dsa\r\ndebug3: no such identity: /home/toscano/.ssh/id_dsa: No such file or directory\r\ndebug2: we did not send a packet, disable method\r\ndebug1: No more authentication methods to try.\r\ntoscano@127.0.0.1: Permission denied (publickey).\r\n')
+2024-11-14 05:43:56,557 p=2407 u=toscano n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: OpenSSH_8.9p1 Ubuntu-3ubuntu0.10, OpenSSL 3.0.2 15 Mar 2022\r\ndebug1: Reading configuration data /etc/ssh/ssh_config\r\ndebug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files\r\ndebug1: /etc/ssh/ssh_config line 21: Applying options for *\r\ndebug2: resolve_canonicalize: hostname 127.0.0.1 is address\r\ndebug1: auto-mux: Trying existing master\r\ndebug1: Control socket \"/home/toscano/.ansible/cp/21f0e6a9ae\" does not exist\r\ndebug3: ssh_connect_direct: entering\r\ndebug1: Connecting to 127.0.0.1 [127.0.0.1] port 22.\r\ndebug3: set_sock_tos: set socket 3 IP_TOS 0x10\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug1: fd 3 clearing O_NONBLOCK\r\ndebug1: Connection established.\r\ndebug3: timeout: 10000 ms remain after connect\r\ndebug1: identity file /home/toscano/.ssh/id_rsa type 0\r\ndebug1: identity file /home/toscano/.ssh/id_rsa-cert type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ecdsa type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ecdsa-cert type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ecdsa_sk type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ecdsa_sk-cert type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ed25519 type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ed25519-cert type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ed25519_sk type -1\r\ndebug1: identity file /home/toscano/.ssh/id_ed25519_sk-cert type -1\r\ndebug1: identity file /home/toscano/.ssh/id_xmss type -1\r\ndebug1: identity file /home/toscano/.ssh/id_xmss-cert type -1\r\ndebug1: identity file /home/toscano/.ssh/id_dsa type -1\r\ndebug1: identity file /home/toscano/.ssh/id_dsa-cert type -1\r\ndebug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10\r\ndebug1: Remote protocol version 2.0, remote software version OpenSSH_8.9p1 Ubuntu-3ubuntu0.10\r\ndebug1: compat_banner: match: OpenSSH_8.9p1 Ubuntu-3ubuntu0.10 pat OpenSSH* compat 0x04000000\r\ndebug2: fd 3 setting O_NONBLOCK\r\ndebug1: Authenticating to 127.0.0.1:22 as 'toscano'\r\ndebug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory\r\ndebug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory\r\ndebug3: order_hostkeyalgs: no algorithms matched; accept original\r\ndebug3: send packet: type 20\r\ndebug1: SSH2_MSG_KEXINIT sent\r\ndebug3: receive packet: type 20\r\ndebug1: SSH2_MSG_KEXINIT received\r\ndebug2: local client KEXINIT proposal\r\ndebug2: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,sntrup761x25519-sha512@openssh.com,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com\r\ndebug2: host key algorithms: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-256\r\ndebug2: ciphers ctos: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com\r\ndebug2: ciphers stoc: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com\r\ndebug2: MACs ctos: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1\r\ndebug2: MACs stoc: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1\r\ndebug2: compression ctos: none,zlib@openssh.com,zlib\r\ndebug2: compression stoc: none,zlib@openssh.com,zlib\r\ndebug2: languages ctos: \r\ndebug2: languages stoc: \r\ndebug2: first_kex_follows 0 \r\ndebug2: reserved 0 \r\ndebug2: peer server KEXINIT proposal\r\ndebug2: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,sntrup761x25519-sha512@openssh.com,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,kex-strict-s-v00@openssh.com\r\ndebug2: host key algorithms: rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519\r\ndebug2: ciphers ctos: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com\r\ndebug2: ciphers stoc: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com\r\ndebug2: MACs ctos: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1\r\ndebug2: MACs stoc: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1\r\ndebug2: compression ctos: none,zlib@openssh.com\r\ndebug2: compression stoc: none,zlib@openssh.com\r\ndebug2: languages ctos: \r\ndebug2: languages stoc: \r\ndebug2: first_kex_follows 0 \r\ndebug2: reserved 0 \r\ndebug3: kex_choose_conf: will use strict KEX ordering\r\ndebug1: kex: algorithm: curve25519-sha256\r\ndebug1: kex: host key algorithm: ssh-ed25519\r\ndebug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none\r\ndebug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none\r\ndebug3: send packet: type 30\r\ndebug1: expecting SSH2_MSG_KEX_ECDH_REPLY\r\ndebug3: receive packet: type 31\r\ndebug1: SSH2_MSG_KEX_ECDH_REPLY received\r\ndebug1: Server host key: ssh-ed25519 SHA256:zp2yhL+lfiVmGIiBD/FIMKtF0arZe1jowJcp7QDMmXQ\r\ndebug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory\r\ndebug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory\r\nWarning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\ndebug3: send packet: type 21\r\ndebug1: ssh_packet_send2_wrapped: resetting send seqnr 3\r\ndebug2: ssh_set_newkeys: mode 1\r\ndebug1: rekey out after 134217728 blocks\r\ndebug1: SSH2_MSG_NEWKEYS sent\r\ndebug1: expecting SSH2_MSG_NEWKEYS\r\ndebug3: receive packet: type 21\r\ndebug1: ssh_packet_read_poll2: resetting read seqnr 3\r\ndebug1: SSH2_MSG_NEWKEYS received\r\ndebug2: ssh_set_newkeys: mode 0\r\ndebug1: rekey in after 134217728 blocks\r\ndebug1: Will attempt key: /home/toscano/.ssh/id_rsa RSA SHA256:7nuq4ueYrd/JBVSE8NjqgopBxJznHeiaxSCPKEqD4hE\r\ndebug1: Will attempt key: /home/toscano/.ssh/id_ecdsa \r\ndebug1: Will attempt key: /home/toscano/.ssh/id_ecdsa_sk \r\ndebug1: Will attempt key: /home/toscano/.ssh/id_ed25519 \r\ndebug1: Will attempt key: /home/toscano/.ssh/id_ed25519_sk \r\ndebug1: Will attempt key: /home/toscano/.ssh/id_xmss \r\ndebug1: Will attempt key: /home/toscano/.ssh/id_dsa \r\ndebug2: pubkey_prepare: done\r\ndebug3: send packet: type 5\r\ndebug3: receive packet: type 7\r\ndebug1: SSH2_MSG_EXT_INFO received\r\ndebug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519,sk-ssh-ed25519@openssh.com,ssh-rsa,rsa-sha2-256,rsa-sha2-512,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ecdsa-sha2-nistp256@openssh.com,webauthn-sk-ecdsa-sha2-nistp256@openssh.com>\r\ndebug1: kex_input_ext_info: publickey-hostbound@openssh.com=<0>\r\ndebug3: receive packet: type 6\r\ndebug2: service_accept: ssh-userauth\r\ndebug1: SSH2_MSG_SERVICE_ACCEPT received\r\ndebug3: send packet: type 50\r\ndebug3: receive packet: type 51\r\ndebug1: Authentications that can continue: publickey\r\ndebug3: start over, passed a different list publickey\r\ndebug3: preferred gssapi-with-mic,gssapi-keyex,hostbased,publickey\r\ndebug3: authmethod_lookup publickey\r\ndebug3: remaining preferred: ,gssapi-keyex,hostbased,publickey\r\ndebug3: authmethod_is_enabled publickey\r\ndebug1: Next authentication method: publickey\r\ndebug1: Offering public key: /home/toscano/.ssh/id_rsa RSA SHA256:7nuq4ueYrd/JBVSE8NjqgopBxJznHeiaxSCPKEqD4hE\r\ndebug3: send packet: type 50\r\ndebug2: we sent a publickey packet, wait for reply\r\ndebug3: receive packet: type 51\r\ndebug1: Authentications that can continue: publickey\r\ndebug1: Trying private key: /home/toscano/.ssh/id_ecdsa\r\ndebug3: no such identity: /home/toscano/.ssh/id_ecdsa: No such file or directory\r\ndebug1: Trying private key: /home/toscano/.ssh/id_ecdsa_sk\r\ndebug3: no such identity: /home/toscano/.ssh/id_ecdsa_sk: No such file or directory\r\ndebug1: Trying private key: /home/toscano/.ssh/id_ed25519\r\ndebug3: no such identity: /home/toscano/.ssh/id_ed25519: No such file or directory\r\ndebug1: Trying private key: /home/toscano/.ssh/id_ed25519_sk\r\ndebug3: no such identity: /home/toscano/.ssh/id_ed25519_sk: No such file or directory\r\ndebug1: Trying private key: /home/toscano/.ssh/id_xmss\r\ndebug3: no such identity: /home/toscano/.ssh/id_xmss: No such file or directory\r\ndebug1: Trying private key: /home/toscano/.ssh/id_dsa\r\ndebug3: no such identity: /home/toscano/.ssh/id_dsa: No such file or directory\r\ndebug2: we did not send a packet, disable method\r\ndebug1: No more authentication methods to try.\r\ntoscano@127.0.0.1: Permission denied (publickey).",
+    "unreachable": true
+}
+2024-11-14 05:43:56,717 p=2407 u=toscano n=ansible | <localhost> Attempting python interpreter discovery
+2024-11-14 05:43:56,717 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'echo PLATFORM; uname; echo FOUND; command -v '"'"'python3.12'"'"'; command -v '"'"'python3.11'"'"'; command -v '"'"'python3.10'"'"'; command -v '"'"'python3.9'"'"'; command -v '"'"'python3.8'"'"'; command -v '"'"'python3.7'"'"'; command -v '"'"'/usr/bin/python3'"'"'; command -v '"'"'python3'"'"'; echo ENDFOUND && sleep 0'
+2024-11-14 05:43:56,722 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python3.10 && sleep 0'
+2024-11-14 05:43:56,761 p=2407 u=toscano n=ansible | <localhost> Python interpreter discovery fallback (unsupported Linux distribution: ubuntu)
+2024-11-14 05:43:56,762 p=2407 u=toscano n=ansible | Using module file /usr/lib/python3/dist-packages/ansible/modules/setup.py
+2024-11-14 05:43:56,763 p=2407 u=toscano n=ansible | <localhost> PUT /home/toscano/.ansible/tmp/ansible-local-2407qefna6w_/tmpm9bt2dzl TO /home/toscano/.ansible/tmp/ansible-tmp-1731563036.4602785-2411-216465275199297/AnsiballZ_setup.py
+2024-11-14 05:43:56,765 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /home/toscano/.ansible/tmp/ansible-tmp-1731563036.4602785-2411-216465275199297/ /home/toscano/.ansible/tmp/ansible-tmp-1731563036.4602785-2411-216465275199297/AnsiballZ_setup.py && sleep 0'
+2024-11-14 05:43:56,769 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python3.10 /home/toscano/.ansible/tmp/ansible-tmp-1731563036.4602785-2411-216465275199297/AnsiballZ_setup.py && sleep 0'
+2024-11-14 05:43:57,621 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'rm -f -r /home/toscano/.ansible/tmp/ansible-tmp-1731563036.4602785-2411-216465275199297/ > /dev/null 2>&1 && sleep 0'
+2024-11-14 05:43:57,648 p=2407 u=toscano n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-11-14 05:43:57,649 p=2407 u=toscano n=ansible | ok: [localhost]
+2024-11-14 05:43:57,658 p=2407 u=toscano n=ansible | TASK [include_role : 2do_parcial] *************************************************************************************************************
+2024-11-14 05:43:57,691 p=2407 u=toscano n=ansible | included: 2do_parcial for localhost
+2024-11-14 05:43:57,699 p=2407 u=toscano n=ansible | TASK [2do_parcial : debug] ********************************************************************************************************************
+2024-11-14 05:43:57,719 p=2407 u=toscano n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-14 05:43:57,727 p=2407 u=toscano n=ansible | TASK [2do_parcial : Crear directorios en /tmp/2do_parcial/] ***********************************************************************************
+2024-11-14 05:43:57,750 p=2407 u=toscano n=ansible | <localhost> ESTABLISH LOCAL CONNECTION FOR USER: toscano
+2024-11-14 05:43:57,751 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'echo ~toscano && sleep 0'
+2024-11-14 05:43:57,756 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/toscano/.ansible/tmp `"&& mkdir "` echo /home/toscano/.ansible/tmp/ansible-tmp-1731563037.754297-2511-186367886228588 `" && echo ansible-tmp-1731563037.754297-2511-186367886228588="` echo /home/toscano/.ansible/tmp/ansible-tmp-1731563037.754297-2511-186367886228588 `" ) && sleep 0'
+2024-11-14 05:43:57,920 p=2407 u=toscano n=ansible | Using module file /usr/lib/python3/dist-packages/ansible/modules/file.py
+2024-11-14 05:43:57,921 p=2407 u=toscano n=ansible | <localhost> PUT /home/toscano/.ansible/tmp/ansible-local-2407qefna6w_/tmpvvbxv5yu TO /home/toscano/.ansible/tmp/ansible-tmp-1731563037.754297-2511-186367886228588/AnsiballZ_file.py
+2024-11-14 05:43:57,922 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /home/toscano/.ansible/tmp/ansible-tmp-1731563037.754297-2511-186367886228588/ /home/toscano/.ansible/tmp/ansible-tmp-1731563037.754297-2511-186367886228588/AnsiballZ_file.py && sleep 0'
+2024-11-14 05:43:57,927 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python3.10 /home/toscano/.ansible/tmp/ansible-tmp-1731563037.754297-2511-186367886228588/AnsiballZ_file.py && sleep 0'
+2024-11-14 05:43:58,124 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'rm -f -r /home/toscano/.ansible/tmp/ansible-tmp-1731563037.754297-2511-186367886228588/ > /dev/null 2>&1 && sleep 0'
+2024-11-14 05:43:58,134 p=2407 u=toscano n=ansible | changed: [localhost] => (item=alumno) => {
+    "ansible_loop_var": "item",
+    "changed": true,
+    "diff": {
+        "after": {
+            "path": "/tmp/2do_parcial/alumno"
+        },
+        "before": {
+            "path": "/tmp/2do_parcial/alumno"
+        }
+    },
+    "gid": 1002,
+    "group": "toscano",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": "0775",
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/tmp/2do_parcial/alumno",
+            "recurse": true,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "item": "alumno",
+    "mode": "0775",
+    "owner": "toscano",
+    "path": "/tmp/2do_parcial/alumno",
+    "size": 4096,
+    "state": "directory",
+    "uid": 1002
+}
+2024-11-14 05:43:58,137 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'echo ~toscano && sleep 0'
+2024-11-14 05:43:58,141 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/toscano/.ansible/tmp `"&& mkdir "` echo /home/toscano/.ansible/tmp/ansible-tmp-1731563038.1406991-2511-157080740039251 `" && echo ansible-tmp-1731563038.1406991-2511-157080740039251="` echo /home/toscano/.ansible/tmp/ansible-tmp-1731563038.1406991-2511-157080740039251 `" ) && sleep 0'
+2024-11-14 05:43:58,150 p=2407 u=toscano n=ansible | Using module file /usr/lib/python3/dist-packages/ansible/modules/file.py
+2024-11-14 05:43:58,151 p=2407 u=toscano n=ansible | <localhost> PUT /home/toscano/.ansible/tmp/ansible-local-2407qefna6w_/tmpk1h3fvyh TO /home/toscano/.ansible/tmp/ansible-tmp-1731563038.1406991-2511-157080740039251/AnsiballZ_file.py
+2024-11-14 05:43:58,152 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /home/toscano/.ansible/tmp/ansible-tmp-1731563038.1406991-2511-157080740039251/ /home/toscano/.ansible/tmp/ansible-tmp-1731563038.1406991-2511-157080740039251/AnsiballZ_file.py && sleep 0'
+2024-11-14 05:43:58,157 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python3.10 /home/toscano/.ansible/tmp/ansible-tmp-1731563038.1406991-2511-157080740039251/AnsiballZ_file.py && sleep 0'
+2024-11-14 05:43:58,328 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'rm -f -r /home/toscano/.ansible/tmp/ansible-tmp-1731563038.1406991-2511-157080740039251/ > /dev/null 2>&1 && sleep 0'
+2024-11-14 05:43:58,335 p=2407 u=toscano n=ansible | changed: [localhost] => (item=equipo) => {
+    "ansible_loop_var": "item",
+    "changed": true,
+    "diff": {
+        "after": {
+            "path": "/tmp/2do_parcial/equipo"
+        },
+        "before": {
+            "path": "/tmp/2do_parcial/equipo"
+        }
+    },
+    "gid": 1002,
+    "group": "toscano",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": "0775",
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/tmp/2do_parcial/equipo",
+            "recurse": true,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "item": "equipo",
+    "mode": "0775",
+    "owner": "toscano",
+    "path": "/tmp/2do_parcial/equipo",
+    "size": 4096,
+    "state": "directory",
+    "uid": 1002
+}
+2024-11-14 05:43:58,343 p=2407 u=toscano n=ansible | TASK [2do_parcial : Agrego archivo desde template] ********************************************************************************************
+2024-11-14 05:43:58,357 p=2407 u=toscano n=ansible | <localhost> ESTABLISH LOCAL CONNECTION FOR USER: toscano
+2024-11-14 05:43:58,358 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'echo ~toscano && sleep 0'
+2024-11-14 05:43:58,362 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/toscano/.ansible/tmp `"&& mkdir "` echo /home/toscano/.ansible/tmp/ansible-tmp-1731563038.3615022-2560-18373384448029 `" && echo ansible-tmp-1731563038.3615022-2560-18373384448029="` echo /home/toscano/.ansible/tmp/ansible-tmp-1731563038.3615022-2560-18373384448029 `" ) && sleep 0'
+2024-11-14 05:43:58,499 p=2407 u=toscano n=ansible | Using module file /usr/lib/python3/dist-packages/ansible/modules/stat.py
+2024-11-14 05:43:58,500 p=2407 u=toscano n=ansible | <localhost> PUT /home/toscano/.ansible/tmp/ansible-local-2407qefna6w_/tmpjfo6rml7 TO /home/toscano/.ansible/tmp/ansible-tmp-1731563038.3615022-2560-18373384448029/AnsiballZ_stat.py
+2024-11-14 05:43:58,501 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /home/toscano/.ansible/tmp/ansible-tmp-1731563038.3615022-2560-18373384448029/ /home/toscano/.ansible/tmp/ansible-tmp-1731563038.3615022-2560-18373384448029/AnsiballZ_stat.py && sleep 0'
+2024-11-14 05:43:58,506 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python3.10 /home/toscano/.ansible/tmp/ansible-tmp-1731563038.3615022-2560-18373384448029/AnsiballZ_stat.py && sleep 0'
+2024-11-14 05:43:59,178 p=2407 u=toscano n=ansible | Using module file /usr/lib/python3/dist-packages/ansible/modules/file.py
+2024-11-14 05:43:59,179 p=2407 u=toscano n=ansible | <localhost> PUT /home/toscano/.ansible/tmp/ansible-local-2407qefna6w_/tmp8xju95xa TO /home/toscano/.ansible/tmp/ansible-tmp-1731563038.3615022-2560-18373384448029/AnsiballZ_file.py
+2024-11-14 05:43:59,180 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /home/toscano/.ansible/tmp/ansible-tmp-1731563038.3615022-2560-18373384448029/ /home/toscano/.ansible/tmp/ansible-tmp-1731563038.3615022-2560-18373384448029/AnsiballZ_file.py && sleep 0'
+2024-11-14 05:43:59,186 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python3.10 /home/toscano/.ansible/tmp/ansible-tmp-1731563038.3615022-2560-18373384448029/AnsiballZ_file.py && sleep 0'
+2024-11-14 05:43:59,381 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'rm -f -r /home/toscano/.ansible/tmp/ansible-tmp-1731563038.3615022-2560-18373384448029/ > /dev/null 2>&1 && sleep 0'
+2024-11-14 05:43:59,392 p=2407 u=toscano n=ansible | ok: [localhost] => {
+    "changed": false,
+    "checksum": "bc7cf16cf35f39cb5a16deb37d4966b7f0f0a090",
+    "dest": "/tmp/2do_parcial/alumno/datos_alumno.txt",
+    "diff": {
+        "after": {
+            "path": "/tmp/2do_parcial/alumno/datos_alumno.txt"
+        },
+        "before": {
+            "path": "/tmp/2do_parcial/alumno/datos_alumno.txt"
+        }
+    },
+    "gid": 1002,
+    "group": "toscano",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "template_01.j2",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/tmp/2do_parcial/alumno/datos_alumno.txt",
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/tmp/2do_parcial/alumno/datos_alumno.txt",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0775",
+    "owner": "toscano",
+    "path": "/tmp/2do_parcial/alumno/datos_alumno.txt",
+    "size": 47,
+    "state": "file",
+    "uid": 1002
+}
+2024-11-14 05:43:59,400 p=2407 u=toscano n=ansible | TASK [2do_parcial : Agrego otro archivo desde template] ***************************************************************************************
+2024-11-14 05:43:59,416 p=2407 u=toscano n=ansible | <localhost> ESTABLISH LOCAL CONNECTION FOR USER: toscano
+2024-11-14 05:43:59,417 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'echo ~toscano && sleep 0'
+2024-11-14 05:43:59,421 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/toscano/.ansible/tmp `"&& mkdir "` echo /home/toscano/.ansible/tmp/ansible-tmp-1731563039.4209163-2595-183780661161981 `" && echo ansible-tmp-1731563039.4209163-2595-183780661161981="` echo /home/toscano/.ansible/tmp/ansible-tmp-1731563039.4209163-2595-183780661161981 `" ) && sleep 0'
+2024-11-14 05:43:59,443 p=2407 u=toscano n=ansible | Using module file /usr/lib/python3/dist-packages/ansible/modules/stat.py
+2024-11-14 05:43:59,444 p=2407 u=toscano n=ansible | <localhost> PUT /home/toscano/.ansible/tmp/ansible-local-2407qefna6w_/tmpzncnyt0f TO /home/toscano/.ansible/tmp/ansible-tmp-1731563039.4209163-2595-183780661161981/AnsiballZ_stat.py
+2024-11-14 05:43:59,445 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /home/toscano/.ansible/tmp/ansible-tmp-1731563039.4209163-2595-183780661161981/ /home/toscano/.ansible/tmp/ansible-tmp-1731563039.4209163-2595-183780661161981/AnsiballZ_stat.py && sleep 0'
+2024-11-14 05:43:59,451 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python3.10 /home/toscano/.ansible/tmp/ansible-tmp-1731563039.4209163-2595-183780661161981/AnsiballZ_stat.py && sleep 0'
+2024-11-14 05:43:59,659 p=2407 u=toscano n=ansible | Using module file /usr/lib/python3/dist-packages/ansible/modules/file.py
+2024-11-14 05:43:59,660 p=2407 u=toscano n=ansible | <localhost> PUT /home/toscano/.ansible/tmp/ansible-local-2407qefna6w_/tmp96v_zzjg TO /home/toscano/.ansible/tmp/ansible-tmp-1731563039.4209163-2595-183780661161981/AnsiballZ_file.py
+2024-11-14 05:43:59,661 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /home/toscano/.ansible/tmp/ansible-tmp-1731563039.4209163-2595-183780661161981/ /home/toscano/.ansible/tmp/ansible-tmp-1731563039.4209163-2595-183780661161981/AnsiballZ_file.py && sleep 0'
+2024-11-14 05:43:59,666 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '/usr/bin/python3.10 /home/toscano/.ansible/tmp/ansible-tmp-1731563039.4209163-2595-183780661161981/AnsiballZ_file.py && sleep 0'
+2024-11-14 05:43:59,867 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'rm -f -r /home/toscano/.ansible/tmp/ansible-tmp-1731563039.4209163-2595-183780661161981/ > /dev/null 2>&1 && sleep 0'
+2024-11-14 05:43:59,875 p=2407 u=toscano n=ansible | ok: [localhost] => {
+    "changed": false,
+    "checksum": "3389ab0d6a8a7ffe2ed2e6ceec8e3a3a4209cc41",
+    "dest": "/tmp/2do_parcial/equipo/datos_equipo.txt",
+    "diff": {
+        "after": {
+            "path": "/tmp/2do_parcial/equipo/datos_equipo.txt"
+        },
+        "before": {
+            "path": "/tmp/2do_parcial/equipo/datos_equipo.txt"
+        }
+    },
+    "gid": 1002,
+    "group": "toscano",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "template_02.j2",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/tmp/2do_parcial/equipo/datos_equipo.txt",
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/tmp/2do_parcial/equipo/datos_equipo.txt",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0775",
+    "owner": "toscano",
+    "path": "/tmp/2do_parcial/equipo/datos_equipo.txt",
+    "size": 56,
+    "state": "file",
+    "uid": 1002
+}
+2024-11-14 05:43:59,883 p=2407 u=toscano n=ansible | TASK [2do_parcial : add NOPASSWD in sudores for group 2PSupervisores] *************************************************************************
+2024-11-14 05:43:59,902 p=2407 u=toscano n=ansible | <localhost> ESTABLISH LOCAL CONNECTION FOR USER: toscano
+2024-11-14 05:43:59,904 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'echo ~toscano && sleep 0'
+2024-11-14 05:43:59,909 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/toscano/.ansible/tmp `"&& mkdir "` echo /home/toscano/.ansible/tmp/ansible-tmp-1731563039.908463-2630-14588069870267 `" && echo ansible-tmp-1731563039.908463-2630-14588069870267="` echo /home/toscano/.ansible/tmp/ansible-tmp-1731563039.908463-2630-14588069870267 `" ) && sleep 0'
+2024-11-14 05:44:00,072 p=2407 u=toscano n=ansible | Using module file /usr/lib/python3/dist-packages/ansible/modules/lineinfile.py
+2024-11-14 05:44:00,073 p=2407 u=toscano n=ansible | <localhost> PUT /home/toscano/.ansible/tmp/ansible-local-2407qefna6w_/tmp2c9q1sfq TO /home/toscano/.ansible/tmp/ansible-tmp-1731563039.908463-2630-14588069870267/AnsiballZ_lineinfile.py
+2024-11-14 05:44:00,075 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'chmod u+x /home/toscano/.ansible/tmp/ansible-tmp-1731563039.908463-2630-14588069870267/ /home/toscano/.ansible/tmp/ansible-tmp-1731563039.908463-2630-14588069870267/AnsiballZ_lineinfile.py && sleep 0'
+2024-11-14 05:44:00,081 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-baqrfzffddcalxjorrgjsjwxodgyvcig ; /usr/bin/python3.10 /home/toscano/.ansible/tmp/ansible-tmp-1731563039.908463-2630-14588069870267/AnsiballZ_lineinfile.py'"'"' && sleep 0'
+2024-11-14 05:44:00,290 p=2407 u=toscano n=ansible | <localhost> EXEC /bin/sh -c 'rm -f -r /home/toscano/.ansible/tmp/ansible-tmp-1731563039.908463-2630-14588069870267/ > /dev/null 2>&1 && sleep 0'
+2024-11-14 05:44:00,300 p=2407 u=toscano n=ansible | ok: [localhost] => {
+    "backup": "",
+    "changed": false,
+    "diff": [
+        {
+            "after": "",
+            "after_header": "/etc/sudoers (content)",
+            "before": "",
+            "before_header": "/etc/sudoers (content)"
+        },
+        {
+            "after_header": "/etc/sudoers (file attributes)",
+            "before_header": "/etc/sudoers (file attributes)"
+        }
+    ],
+    "invocation": {
+        "module_args": {
+            "attributes": null,
+            "backrefs": false,
+            "backup": false,
+            "create": false,
+            "firstmatch": false,
+            "group": null,
+            "insertafter": null,
+            "insertbefore": null,
+            "line": "%2PSupervisores ALL=(ALL) NOPASSWD: ALL",
+            "mode": null,
+            "owner": null,
+            "path": "/etc/sudoers",
+            "regexp": null,
+            "search_string": null,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "state": "present",
+            "unsafe_writes": false,
+            "validate": "visudo -cf %s"
+        }
+    },
+    "msg": ""
+}
+2024-11-14 05:44:00,315 p=2407 u=toscano n=ansible | TASK [Otra tarea] *****************************************************************************************************************************
+2024-11-14 05:44:00,332 p=2407 u=toscano n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-14 05:44:00,334 p=2407 u=toscano n=ansible | PLAY RECAP ************************************************************************************************************************************
+2024-11-14 05:44:00,334 p=2407 u=toscano n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-14 05:44:00,334 p=2407 u=toscano n=ansible | localhost                  : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
