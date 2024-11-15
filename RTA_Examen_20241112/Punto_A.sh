@@ -13,6 +13,8 @@ n
 
 
 +512M
+t
+8e
 w
 EOF
 sudo fdisk /dev/sdc << EOF
@@ -21,6 +23,8 @@ n
 
 
 +1.5G
+t
+8e
 w
 EOF
 sudo pvcreate /dev/sdd1
